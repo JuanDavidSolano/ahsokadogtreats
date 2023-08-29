@@ -1,6 +1,9 @@
-import express, { Application, Request, Response } from "express";
+import "reflect-metadata";
+import express, { Application } from "express";
 import morgan from "morgan";
 import swaggerUi from "swagger-ui-express";
+
+import dataSource from "./config/database";
 
 import Router from "./routes";
 
@@ -26,3 +29,12 @@ app.use(Router);
 app.listen(PORT, () => {
   console.log("Server is running on port", PORT);
 });
+
+dataSource
+  .initialize()
+  .then(() => {
+    console.log("DB has been initialized");
+  })
+  .catch((err) => {
+    console.log("Error during Data Source initialization", err);
+  });
