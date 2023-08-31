@@ -1,0 +1,7 @@
+import { User } from "../../models";
+import { UserRepository } from "../user.repository";
+
+export const getAllUsers = (): Promise<User[]> => {
+  const userRepository = new UserRepository();
+  return userRepository.getAll();
+};
