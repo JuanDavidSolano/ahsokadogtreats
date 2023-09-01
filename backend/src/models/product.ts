@@ -5,7 +5,6 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
 } from "typeorm";
-import { Order } from "./order";
 
 @Entity()
 export class Product {
@@ -13,10 +12,16 @@ export class Product {
   id!: number;
 
   @Column()
-  quantity!: number;
+  name!: string;
 
   @Column()
-  productId!: string;
+  tag!: string;
+
+  @Column()
+  price!: string;
+
+  @Column()
+  available!: boolean;
 
   @CreateDateColumn()
   createdAt!: Date;
