@@ -1,4 +1,4 @@
-import { Body, Delete, Get, Path, Post, Patch, Route } from "tsoa";
+import { Body, Delete, Get, Path, Post, Patch, Route, Tags } from "tsoa";
 import { IUser } from "./interfaces/user.interface";
 import {
   createUser,
@@ -9,6 +9,7 @@ import {
 } from "./user.service";
 import { User } from "../models";
 
+@Tags("User")
 @Route("user")
 export default class UserController {
   @Post("/")
