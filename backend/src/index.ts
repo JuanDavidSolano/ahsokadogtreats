@@ -5,7 +5,7 @@ import swaggerUi from "swagger-ui-express";
 
 import dataSource from "./config/database";
 
-import Router from "./routes";
+import Router from "./router";
 
 const PORT = process.env.PORT || 8000;
 
