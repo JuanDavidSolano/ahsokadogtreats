@@ -1,6 +1,6 @@
 import { DeleteResult } from "typeorm";
 import dataSource from "../config/database";
-import { Client } from "../models";
+import { Client } from "./client.model";
 import { IClient } from "./interfaces/client.interface";
 
 export class ClientRepository {
