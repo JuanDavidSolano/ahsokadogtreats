@@ -1,4 +1,3 @@
-import { Client } from "../../models";
 import { IClient } from "../interfaces/client.interface";
 import { ClientRepository } from "../client.repository";
 

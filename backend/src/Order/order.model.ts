@@ -8,9 +8,8 @@ import {
   JoinColumn,
   OneToMany,
 } from "typeorm";
-import { Client } from "./client";
-import { OrderItem } from "./orderItem";
-import { User } from "./user";
+import { Client } from "../Client/client.model";
+import { OrderItem } from "../OrderItem/orderItem.model";
 
 @Entity()
 export class Order {
@@ -25,6 +24,12 @@ export class Order {
   @ManyToOne((_type) => Client, (client: Client) => client.orders)
   @JoinColumn()
   client!: Client;
+
+  @Column()
+  payMethod!: string;
+
+  @Column()
+  address!: string;
 
   @CreateDateColumn()
   createdAt!: Date;

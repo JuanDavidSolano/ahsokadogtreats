@@ -7,7 +7,7 @@ import {
   getClient,
   updateClient,
 } from "./client.service";
-import { Client } from "../models";
+import { Client } from "./client.model";
 
 @Tags("Client")
 @Route("client")

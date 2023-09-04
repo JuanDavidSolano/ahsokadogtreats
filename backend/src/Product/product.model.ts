@@ -2,34 +2,26 @@ import {
   Entity,
   PrimaryGeneratedColumn,
   Column,
-  ManyToOne,
-  OneToMany,
   CreateDateColumn,
   UpdateDateColumn,
-  JoinColumn,
 } from "typeorm";
-import { Order } from "./order";
-import { User } from "./user";
 
 @Entity()
-export class Client {
+export class Product {
   @PrimaryGeneratedColumn()
   id!: number;
 
   @Column()
-  firstName!: string;
+  name!: string;
 
   @Column()
-  lastName!: string;
-
-  @OneToMany((_type) => Order, (order: Order) => order.client)
-  orders!: Array<Order>;
+  tag!: string;
 
   @Column()
-  phoneNumber!: string;
+  price!: string;
 
   @Column()
-  address!: string;
+  available!: boolean;
 
   @CreateDateColumn()
   createdAt!: Date;

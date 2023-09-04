@@ -9,8 +9,8 @@ import {
   JoinColumn,
   OneToOne,
 } from "typeorm";
-import { Order } from "./order";
-import { Product } from "./product";
+import { Order } from "../Order/order.model";
+import { Product } from "../Product/product.model";
 
 @Entity()
 export class OrderItem {
@@ -21,11 +21,13 @@ export class OrderItem {
   quantity!: number;
 
   @Column()
-  orderId!: string;
+  orderId!: number;
   @ManyToOne((_type) => Order, (order: Order) => order.orderItems)
   @JoinColumn()
   order!: Order;
 
+  @Column()
+  productId!: number;
   @OneToOne(() => Product)
   @JoinColumn()
   product!: Product;
