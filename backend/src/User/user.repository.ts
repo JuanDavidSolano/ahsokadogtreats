@@ -1,7 +1,6 @@
 import { DeleteResult } from "typeorm";
-import { IError } from "../Utils/IError";
 import dataSource from "../config/database";
-import { User } from "../models";
+import { User } from "./user.model";
 import { IUser } from "./interfaces/user.interface";
 
 export class UserRepository {

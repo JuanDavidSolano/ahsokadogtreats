@@ -7,7 +7,7 @@ import {
   getUser,
   updateUser,
 } from "./user.service";
-import { User } from "../models";
+import { User } from "./user.model";
 
 @Tags("User")
 @Route("user")
