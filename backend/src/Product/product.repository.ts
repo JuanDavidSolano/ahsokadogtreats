@@ -1,6 +1,6 @@
 import { DeleteResult } from "typeorm";
 import dataSource from "../config/database";
-import { Product } from "../models";
+import { Product } from "./product.model";
 import { IProduct } from "./interfaces/product.interface";
 
 export class ProductRepository {

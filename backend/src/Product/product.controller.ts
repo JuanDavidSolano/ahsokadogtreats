@@ -7,7 +7,7 @@ import {
   getProduct,
   updateProduct,
 } from "./product.service";
-import { Product } from "../models";
+import { Product } from "./product.model";
 
 @Tags("Product")
 @Route("product")
