@@ -36,5 +36,5 @@ dataSource
     console.log("DB has been initialized");
   })
   .catch((err) => {
-    console.log("Error during Data Source initialization", err);
+    console.log("Error during Data Source initialization 1", err);
   });
